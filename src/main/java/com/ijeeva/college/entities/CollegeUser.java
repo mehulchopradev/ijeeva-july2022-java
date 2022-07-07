@@ -39,6 +39,8 @@ public class CollegeUser {
         this.address = address;
     }
 
+    // final method cannot be overriden further, but can be inherited further
+    // try marking getDetails as final and see the error in the Learner class
     public String getDetails() {
         // this -> Learner, Professor
         return String.format("Name: %s\nGender: %s", this.name, this.gender);

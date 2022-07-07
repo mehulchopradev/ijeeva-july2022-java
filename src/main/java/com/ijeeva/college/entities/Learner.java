@@ -1,6 +1,7 @@
 package com.ijeeva.college.entities;
 
-public class Learner extends CollegeUser {
+// final class cannot be inherited further
+public final class Learner extends CollegeUser {
 
     private int roll;
     private float marks;
