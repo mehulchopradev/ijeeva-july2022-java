@@ -1,5 +1,7 @@
 package com.ijeeva.college.entities;
 
+import java.util.Objects;
+
 public class Student {
 
     // object attributes / instance attributes
@@ -114,5 +116,18 @@ public class Student {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return this.roll == student.roll;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(roll);
     }
 }
